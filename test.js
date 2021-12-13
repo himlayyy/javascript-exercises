@@ -32,4 +32,8 @@ function sumAll(a, b){
    return(accumulator);
 };
 
-const leapYears = year => (((year % 4 === 0) && (year % 100 === 0)) || (year % 400 === 0)) ?  true :false;
+const leapYears = year => ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+
+const ftoc = temp => Math.round((((temp - 32)*5)/ 9) * Math.pow(10, 1))/ Math.pow(10, 1);
+
+const ctof = temp => Math.round((((temp * 9)/ 5)+32) * Math.pow(10,1)) / Math.pow(10,1);
